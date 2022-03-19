@@ -130,7 +130,7 @@ def save_checkpoint(state, is_best, checkpoint):
     if is_best:
         shutil.copyfile(filepath, str(Path(checkpoint) / 'best.pth.tar'))
 
-
+#加载checkpoint
 def load_checkpoint(checkpoint, model, optimizer=None):
     """Loads model parameters (state_dict) from file_path. If optimizer is provided, loads state_dict of
     optimizer assuming it is present in checkpoint.
